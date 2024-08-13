@@ -1,0 +1,281 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('arnel-hasanovic-MNd-Rka1o0Q-unsplash.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%; 
+    padding: 20px 100px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99;
+    background-color: white;
+}
+.logo{
+    font-size: 2em;
+    user-select: none;
+    color: #162938;
+}
+.navigation a{
+    position: relative;
+    color: #162938;
+    margin-left: 50px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.11em;
+    transition: .5s;
+}
+.navigation a:hover{
+    background:#162938;
+    color:white;
+    padding:5px 8px;
+    transform-origin: right;
+    border-radius: 5px;
+}
+.navigation button{
+    font-size: 1.1em;
+    height: 30px;
+    width: 70px;
+    padding:5px 8px;
+    border-radius: 10%;
+    background: white;
+    border: none;
+    outline: none;
+    cursor:pointer;
+    color:#162938;
+    transition: .3s;
+    margin-left: 40px;
+    font-weight: 550;
+}
+.navigation button:hover{
+    position: relative;
+    color: white;
+    border-radius: 10px;
+    background-color: #162938;
+    border: 3px solid white;
+    margin-left: 50px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 1.1em;
+    transition: .5s;
+    
+}
+.wrapper{
+    position: relative;
+    background-color: #162938;
+    height:440px;
+    width:410px;
+    background:transparent;
+    border: 2px solid rgba(255,255,255,.5);
+    border-radius:3%;
+    backdrop-filter: blur(30px);
+    box-shadow: 10px 10px 100px rgba(255, 255, 255, 0.938);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    overflow: hidden;
+    transition: transform .2s ease, height .18s ease;
+    transform: scale(0);
+    user-select: none;
+}
+.wrapper.active-popup{
+    transform: scale(1);
+}
+.wrapper.active{
+    height: 500px;
+    width:420px;
+}
+.wrapper .intro{
+    padding:20px;
+}
+.intro h2{
+    color: #162938;
+    font-size: 2em;
+    text-align:left;
+}
+.intro h3{
+    color: #162938;
+    font-size: 1.5em;
+    padding: 5px 0 10px 0;
+    text-align: left;
+}
+.wrapper .form-box{
+    width:100%;
+    padding:20px;
+}
+.wrapper .form-box.login{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translate(-400px);
+}
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translate(400px);
+}
+.wrapper.active .form-box.register{
+    transition: .18s ease;
+    transform: translateX(0);
+}
+.form-box h2{
+    color: #162938;
+    text-align: center;
+    font-size: 1.8em;
+}
+.input-box{
+    position: relative;
+    margin:20px 0px;
+    width: 100%;
+    height:50px;
+    border-bottom: 2px solid rgba(255,255,255,.5);
+}
+.input-box label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 700;
+    pointer-events: none;
+    opacity: 0.5;
+}
+.input-box input{
+    font-size: 1.3em;
+    height:100%;
+    width:100%;
+    background: transparent;
+    border:none;
+    outline: none;
+    font-weight:600;
+    padding:0px 35px 0px 5px;
+    color: #162938;
+}
+.input-box .icon{
+    position:absolute;
+    right:8px;
+    font-size: 1.2em;
+    
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top:-5px;
+    transition: .3s;
+}
+.wrapper .remfor{
+    font-size: 1em;
+    color:#162938;
+    font-weight:500;
+    justify-content: space-between;
+    margin: 15px 0 15px;
+    display:flex;
+}
+.wrapper a{
+    text-decoration: none;
+    color:#162938
+}
+.wrapper a:hover{
+    text-decoration: underline;
+}
+.remfor label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.wrapper button{
+    height:45px;
+    width: 100%;
+    margin:0 0 5px;
+    text-align: center;
+    background: white;
+    font-size: 1.1em;
+    font-weight: 1000;
+    border-radius: 6px;
+    outline:none;
+    border:none;
+    color: #162938;
+}
+.wrapper button:hover{
+    cursor:pointer;
+    background-color: #162938;
+    color:white;
+}
+.loginregister{
+    margin:5px;
+    color: #162938;
+    font-weight: 500;
+    font-size: 1em;
+    text-align: center;
+}
+.loginregister a{
+    margin:5px;
+    font-size: 1em;
+    font-weight: 700;
+}
+.socialmedia{
+    margin:10px 10px;
+    text-align: center;
+}
+.socialmedia p{
+    color: #162938;
+    font-weight: 700;
+    margin-right: 2px;
+}
+.socialmedia a{
+    top:-1%;
+    margin: 2px 2px 0 2px; 
+}
+.wrapper .tandc{
+    color:#162938;
+    font-size: 700; 
+    padding: 10px 10px 15px 10px;
+    margin: 15px 0 7px;
+    justify-content: space-between;
+}
+.tandc label{
+    accent-color: #162938;
+    font-size: 700;
+    font-weight: 200; 
+}
+.tandc input{
+    margin: 0 7px 0 0;
+}
+.wrapper .intro{
+    text-align: left;
+}
+.tandc a{
+    font-size: 0.9em;
+    font-weight: 700;
+}
+.wrapper .close-button{
+    height:30px;
+    width: 70px;
+    margin:0 0 5px;
+    text-align: center;
+    background: red;
+    font-size: 0.9em;
+    font-weight: 1000;
+    border-radius: 6px;
+    outline:none;
+    border:none;
+    color: #162938;
+}
+
